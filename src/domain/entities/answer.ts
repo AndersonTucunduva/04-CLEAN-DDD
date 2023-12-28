@@ -1,15 +1,15 @@
 import { randomUUID } from "crypto"
 
-export class Question {
+export class Answer {
     public id: string
-    public title: string
     public content: string
     public authorId: string
+    public questionId: string
 
-    constructor(title: string, content: string, authorId: string, id?:string){
-        this.title = title
+    constructor(content: string, authorId: string, questionId: string, id?:string){
         this.content = content
         this.authorId = authorId
+        this.questionId = questionId
         this.id = id ?? randomUUID()
     }
 }
